@@ -1,0 +1,42 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+}
+
+.header-logo {
+}
+
+.header-navbar {
+  border: solid 1px lightgrey;
+  border-radius: 30px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%,0)
+}
+
+.header-navbar ul {
+  padding: 0 30px;
+}
+
+.header-navbar li {
+  display: inline;
+  padding: 0 10px;
+}
+
+
+.header-signin {
+  display: flex;
+}
+
+.header-signin span {
+  padding: 10px 20px;
+}
+
+.header-signin-signup {
+  margin-left: 8px;
+  border-radius: 20px;
+  background-color: #222222;
+  color: white;
+}
