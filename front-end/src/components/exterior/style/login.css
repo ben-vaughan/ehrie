@@ -1,0 +1,24 @@
+.login-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-inner {
+  max-width: 450px;
+  width: 450px;
+}
+
+.login-title {
+  font-size: 24px;
+  border-bottom: solid 1px lightgrey;
+  margin-bottom: 16px;
+}
+
+.login-input {
+  width: 100%;
+  border: solid 1px #dfe1f4;
+  border-radius: 5px;
+  min-height: 32px;
+}

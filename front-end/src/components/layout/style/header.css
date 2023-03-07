@@ -5,9 +5,6 @@
   padding: 20px 50px;
 }
 
-.header-logo {
-}
-
 .header-navbar {
   border: solid 1px lightgrey;
   border-radius: 30px;
@@ -23,6 +20,11 @@
 .header-navbar li {
   display: inline;
   padding: 0 10px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #222222;
 }
 
 

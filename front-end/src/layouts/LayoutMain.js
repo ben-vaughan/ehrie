@@ -1,10 +1,11 @@
 import Header from "../components/layout/Header";
+import { Outlet } from "react-router-dom";
 
-const LayoutMain = ({page}) => {
+const LayoutMain = () => {
   return (
     <div>
       <Header/>
-      <div className="layout-body">{page}</div>
+      <Outlet/>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style/header.css'
 import logo from '../../assets/icons/heart-pulse.svg';
 
@@ -9,9 +10,9 @@ const Header = () => {
       </div>
       <div className="header-navbar">
         <ul>
-          <li> About </li>
-          <li> Privacy </li>
-          <li> FAQ </li>
+          <li> <Link className="navbar-link" to="/about"> About </Link> </li>
+          <li> <Link className="navbar-link" to="/privacy"> Privacy </Link> </li>
+          <li> <Link className="navbar-link" to="/faq"> FAQ </Link> </li>
         </ul>
       </div>
       <div className="header-signin">
