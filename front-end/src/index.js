@@ -9,8 +9,13 @@ import Login from './components/exterior/Login';
 import './index.css';
 
 // User-Defined Components
+import LayoutApp from './layouts/LayoutApp';
 import LayoutMain from './layouts/LayoutMain';
+
 import Home from './pages/exterior/Home'
+import Dashboard from './pages/interior/Dashboard';
+
+import History from './pages/interior/History';
 
 export default function App() {
   return (
@@ -25,6 +30,11 @@ export default function App() {
         </Route>
 
         <Route path="/login" element={<Login />}/>
+
+        <Route path="/app" element={<LayoutApp />}>
+          <Route index element={<Dashboard/>}/>
+          <Route path="/app/history" element={<History/>}/>
+        </Route>
 
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,19 @@
+.data-block-wrapper {
+  padding: 20px;
+}
+
+.data-block-title {
+  font-size: 18px;
+  width: 100%;
+  color:#343434;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.data-block-main {
+  border-radius: 10px;
+  min-height: 30vh;
+  width: 100%;
+  box-shadow: 10px 10px 17px 0px rgba(204,204,204,0.75);
+  padding: 10px;
+}

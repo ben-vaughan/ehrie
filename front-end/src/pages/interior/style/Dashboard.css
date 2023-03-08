@@ -1,0 +1,24 @@
+.dashboard-wrapper {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-appointments-wrapper {
+  width: 60%;
+}
+
+.dashboard-results-wrapper {
+  width: 40%;
+}
+
+.dashboard-inner {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* .dashboard-section {
+  padding: 0px 10px 0px 10px;
+} */
