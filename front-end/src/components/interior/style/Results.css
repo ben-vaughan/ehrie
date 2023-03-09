@@ -2,6 +2,19 @@
   padding: 10px;
 }
 
+.results-title-wrapper {
+  padding-bottom: 15px;
+}
+
+.results-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.results-subtitle {
+  font-weight: 100;
+}
+
 .results-grid {
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -26,8 +39,10 @@
 
 .results-grid-item button {
   border: none;
-  font-weight: 500;
-  background-color: #F7F7F7;
+  min-width: 90px;
+  color: white;
+  font-weight: 700;
+  background-color: #A4C79D;
   padding: 8px 15px;
   border-radius: 10px;
 }

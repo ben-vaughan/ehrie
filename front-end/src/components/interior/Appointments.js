@@ -1,7 +1,11 @@
 import React from 'react';
 import "./style/Appointments.css";
 
-const Appointments = (props) => {
+const Appointments = ({appointments, handleUpdate}) => {
+
+  const handleClick = (appointmentData) => {
+    handleUpdate(appointmentData)
+  }
 
   return(
     <div className="appointments-wrapper">
@@ -15,11 +19,14 @@ const Appointments = (props) => {
         <div className="appointments-grid-header">
           Provider
         </div>
+        <div className="appointments-grid-header">
+          Type
+        </div>
         <div/>
 
         {
-          props.data.map((i) => (
-            <React.Fragment key={i}>
+          appointments.map((i) => (
+            <React.Fragment key={i.id}>
               <div className="appointments-grid-item">
                 {i.location}
               </div>
@@ -30,7 +37,14 @@ const Appointments = (props) => {
                 {i.provider}
               </div>
               <div className="appointments-grid-item">
-                <button> Results </button>
+                <div className="appointments-type-border">
+                  {i.type}
+                  </div>
+              </div>
+              <div className="appointments-grid-item">
+                <button onClick={() => handleClick(i)}> 
+                  Results
+                </button>
               </div>
             </React.Fragment>
           ))

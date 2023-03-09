@@ -1,22 +1,9 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../style/home.css';
+import './style/home.css';
 
 const Home = () => {
-  const [loginVisible, setLoginVisibility] = useState(false);
-
-  function handleLogin() {
-    if (loginVisible) {
-      setLoginVisibility(false)
-      console.log(loginVisible)
-    }
-    else {
-      setLoginVisibility(true)
-      console.log(loginVisible)
-    }
-  }
-
   return (
     <div className="home-container">
       <div className="hero-container">
@@ -30,11 +17,11 @@ const Home = () => {
           <div className="hero-button-group">
             <button className="hero-button-sign-up"> Sign up </button>
             <Link to="/login">
-            <button onClick={handleLogin} className="hero-button-log-in"> Log in </button>
+              <button className="hero-button-log-in"> Log in </button>
             </Link>
           </div>
         </div>
-      </div>
+      </div>s
     </div> 
   )
 }

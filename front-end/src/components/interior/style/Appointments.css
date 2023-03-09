@@ -2,9 +2,17 @@
   padding: 10px;
 }
 
+.appointments-type-border {
+  background-color: #F7F7F7;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+}
+
 .appointments-grid {
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 3fr 1fr;
 }
 
 .appointments-grid-header {

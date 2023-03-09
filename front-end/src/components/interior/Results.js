@@ -1,49 +1,45 @@
+import React from 'react';
 import "./style/Results.css";
 
-const Results = () => {
+const Results = ({data}) => {
 
   return(
     <div className="results-wrapper">
+      <div className="results-title-wrapper">
+        <div className="results-title">
+          {data.location}
+        </div>
+        <div className="results-subtitle">
+          {data.date}
+        </div>
+        <div className="results-subtitle">
+          {data.provider}
+        </div>
+      </div>
       <div className="results-grid">
-        <div className="results-grid-header">
-          <span> Subject </span>
-        </div>
-        <div className="results-grid-header">
-          <span> Result </span>
-        </div>
-
-        <div className="results-grid-item">
-          <div>
-            <div className="results-grid-item-main">
-              HCT
-            </div>
-            <div>
-              Hematocrit
-            </div>
-          </div>
-        </div>
-        <div className="results-grid-item">
-          <button>
-            45.4%
-          </button>
-        </div>
-
-        <div className="results-grid-item">
-          <div>
-            <div className="results-grid-item-main">
-              HCT
-            </div>
-            <div>
-              Hematocrit
-            </div>
-          </div>
-        </div>
-        <div className="results-grid-item">
-          <button>
-            45.4%
-          </button>
-        </div>
-
+        <div/>
+        <div/>
+        {
+          data.results.map((i) => (
+            <React.Fragment key={i}>
+              <div className="results-grid-item">
+                <div>
+                  <div className="results-grid-item-main">
+                    {i.name}
+                  </div>
+                  <div>
+                  {i.name_long}
+                  </div>
+                </div>
+              </div>
+              <div className="results-grid-item">
+                <button>
+                  {i.result}
+                </button>
+              </div>
+            </React.Fragment>
+          ))
+        }
       </div>
     </div>
   )
