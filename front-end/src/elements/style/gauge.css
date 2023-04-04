@@ -1,0 +1,60 @@
+
+
+.gauge-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+}
+
+
+
+.gauge-title {
+  position: absolute;
+  text-align: center;
+}
+
+.gauge-title h1 {
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+.gauge-title p {
+  line-height: 0px;
+  font-weight: 100;
+  font-size: 0.8em;
+}
+
+
+
+
+.gauge-container > .gauge {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.gauge-container > .gauge .dial {
+  transform: translate(0, 12%);
+  stroke: #F7F5FD;
+  stroke-width: 10;
+}
+
+.gauge-container > .gauge .value {
+  transform: translate(0, 12%);
+  stroke: #6640DD;
+  stroke-width: 10;
+}
+
+.gauge-container > .gauge .value-text {
+  fill: #343434;
+  font-weight: 600;
+  font-size: 0.6em;
+  position: absolute;
+}
+
+.gauge-container > .gauge .text-container {
+  transform: translate(0, 25%);
+}

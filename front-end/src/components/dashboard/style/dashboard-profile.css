@@ -1,0 +1,48 @@
+.profile-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-header-image {
+  font-size: 40px;
+  height: 100px;
+}
+
+.profile-header-image svg {
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
+}
+
+.profile-header-name {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.profile-header-location {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.profile-content-title {
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
+.profile-content-grid {
+  width: 100%;
+  padding: 0px;
+}
+
+.profile-content-grid tr td {
+  padding: 0px;
+}
+
+.profile-content-grid tr {
+  padding: 0px;
+  width: 100%;
+}
+
+.profile-content-grid-value {
+  font-weight: 100;
+}

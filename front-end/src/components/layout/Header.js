@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
 import './style/header.css'
+
+import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/heart-pulse.svg';
 
 const Header = () => {
@@ -10,14 +11,9 @@ const Header = () => {
       </div>
       <div className="header-navbar">
         <ul>
-          <li> <Link className="navbar-link" to="/about"> About </Link> </li>
-          <li> <Link className="navbar-link" to="/privacy"> Privacy </Link> </li>
-          <li> <Link className="navbar-link" to="/faq"> FAQ </Link> </li>
+          <li> <Link className="navbar-link selected" to="/app"> Dashboard </Link> </li>
+          <li> <Link className="navbar-link" to="/app/history"> History </Link> </li>
         </ul>
-      </div>
-      <div className="header-signin">
-        <span> Log in </span>
-        <span className="header-signin-signup"> Sign up </span>
       </div>
     </div>
   )

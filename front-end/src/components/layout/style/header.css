@@ -2,23 +2,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
+  min-height: 70px;
+  padding: 0.5vh 20px;
 }
 
 .header-navbar {
-  border: solid 1px lightgrey;
-  border-radius: 30px;
+  border: solid 1px #E5E5E5;
+  border-radius: 20px;
   position: fixed;
   left: 50%;
-  transform: translate(-50%,0)
+  transform: translate(-50%,0);
+  padding: 0px;
 }
 
 .header-navbar ul {
-  padding: 0 30px;
+  padding: 0 8px;
+  margin: 8px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .header-navbar li {
-  display: inline;
+  display: inline-flex;
   padding: 0 10px;
 }
 
@@ -27,18 +32,10 @@
   color: #222222;
 }
 
-
-.header-signin {
-  display: flex;
-}
-
-.header-signin span {
-  padding: 10px 20px;
-}
-
-.header-signin-signup {
-  margin-left: 8px;
-  border-radius: 20px;
-  background-color: #222222;
+.selected {
+  width: 100%;
+  background-color: #6640DD;
   color: white;
+  padding: 2px 10px;
+  border-radius: 25px;
 }

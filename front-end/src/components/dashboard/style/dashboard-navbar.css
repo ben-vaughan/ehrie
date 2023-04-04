@@ -1,0 +1,28 @@
+.dashbar-navbar-wrapper {
+  width: 100%;
+  border: solid 1px red;
+}
+
+.dashboard-navbar {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.dashboard-navbar ul {
+  padding: 0px;
+}
+
+.dashboard-navbar li {
+  display: inline-flex;
+  margin-left: 5px;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.dashboard-navbar li:first-child {
+  background-color: #6640DD;
+  margin-left: 0px;
+  color: white;
+}

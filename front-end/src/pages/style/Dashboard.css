@@ -1,0 +1,30 @@
+/* Dashboard Wrapper & Containers */
+.dashboard-wrapper {
+  width: 100%;
+  margin: 1vw;
+}
+
+.dashboard-container {
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+.dashboard-title {
+  font-size: 1em;
+}
+
+
+
+/* Dashboard Content */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.dashboard-content-container {
+  padding: 15px;
+  border-radius: 20px;
+  margin: 5px;
+  margin-bottom: 20px;
+  box-shadow: 9px 8px 22px -6px rgba(222,222,222,1);
+}

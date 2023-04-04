@@ -1,8 +1,8 @@
-import "./style/DataBlock.css"
+import "./style/Block.css"
 
-const DataBlock = (props) => {
+const Block = (props) => {
   return (
-    <div className="data-block-wrapper">
+    <div>
       <div className="data-block-title">
         { props.title }
       </div>
@@ -13,4 +13,4 @@ const DataBlock = (props) => {
   )
 }
 
-export default DataBlock;
+export default Block;

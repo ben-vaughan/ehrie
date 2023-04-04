@@ -1,12 +1,13 @@
-import "./style/Dashboard.css"
+import { useState } from 'react';
 
-import Appointments from "../../components/interior/Appointments"
-import Results from "../../components/interior/Results"
-import { useState, useEffect } from 'react';
+import "./style/History.css"
 
-import DataBlock from "../../elements/DataBlock"
+import Appointments from "../components/other/Appointments"
+import Results from "../components/other/Results"
 
-const Dashboard = () => {
+import DataBlock from "../elements/Block"
+
+const History = () => {
 
   const [currentData, setCurrentData] = useState({
       id: "vsc6d22dbgh",
@@ -137,4 +138,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard;
+export default History;

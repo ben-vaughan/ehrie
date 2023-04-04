@@ -28,7 +28,7 @@ const Results = ({data}) => {
                     {i.name}
                   </div>
                   <div>
-                  {i.name_long}
+                    {i.name_long}
                   </div>
                 </div>
               </div>

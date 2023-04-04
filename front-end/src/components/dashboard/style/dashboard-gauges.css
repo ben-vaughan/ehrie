@@ -1,0 +1,21 @@
+.gauges-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gauges-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  min-width: 200px;
+  height: 150px;
+}
+
+.gauges-inner {
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 9px 8px 22px -6px rgba(222,222,222,1);
+}
