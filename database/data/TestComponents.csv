@@ -1,0 +1,29 @@
+﻿component_id,component_name,component_abbreviation,type_id
+1,White Blood Cell,WBC,1
+2,Haemoglobin,Hb,1
+3,Red Blood Cell,RBC,1
+4,Haematocrit,HCT,1
+5,Mean Cell Volume,MCV,1
+6,Mean Corpuscular Haemoglobin,MCH,1
+7,Mean Corpuscular Haemoglobin Concentration,MCHC,1
+8,Red Cell Distribution Width,RDW,1
+9,Platelet Count,Plt,1
+10,Thyroid Stimulating Hormone,TSH,2
+11,Free Thryoxine,FT4,2
+12,Free Tri-Iodothyronine,FT3,2
+13,Albumin,ALB,3
+14,Total Bilirubin,TBR,3
+15,Alkaline Phosphatase,ALP,3
+16,Alanine Aminotransferase,ALT,3
+17,Urea,Urea,4
+18,Sodium,Na,4
+19,Potassium,K,4
+20,Creatinine,CR,4
+21,Calcium,Ca,5
+22,Phospate,Ph,5
+23,Albumin,ALB,5
+24,Alkaline Phosphatase,ALP,5
+25,Cholestorol,Chol,6
+26,Triglycerides,TG,6
+27,High-Density Lipoprotein,HDL,6
+28,Low-Densitory Lipoprotein,LDL,6
