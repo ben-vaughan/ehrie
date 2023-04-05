@@ -1,7 +1,25 @@
 import "./style/Entrance.css"
 import { Link } from "react-router-dom";
 
+import React, { useContext, useEffect } from 'react';
+import UserContext from "../contexts/UserContext";
+
+import API from "../utils/api.js"
+
 const Entrance = () => {
+  const { user, login } = useContext(UserContext);
+
+  const getPatient = async () => {
+    const patientData = await API.getRandomPatient();
+    login(patientData.body);
+  }
+
+  useEffect(() => {
+    let ignore = false;
+    if (!ignore) getPatient();
+    return () => { ignore = true; }
+  }, []);
+
   return (
     <div className="entrance-wrapper">
       <div className="entrance-container">

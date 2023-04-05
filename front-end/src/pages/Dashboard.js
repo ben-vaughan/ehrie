@@ -5,11 +5,15 @@ import DashboardCharts from "../components/dashboard/DashboardCharts";
 import DashboardGauges from "../components/dashboard/DashboardGauges";
 import DashboardNavbar from "../components/dashboard/DashboardNavbar";
 
+import { useContext } from 'react';
+import UserContext from "../contexts/UserContext";
+
 const Dashboard = () => {
+  const { user } = useContext(UserContext);
   
   const profileProps = {
-    name: "Ben Vaughan",
-    dateOfBirth: "02/01/2001",
+    name: user.attributes.name.first + " " + user.attributes.name.last,
+    dateOfBirth: user.attributes.date_of_birth,
     location: "Dublin, Ireland",
     weight: 80.45,
     height: 181,
