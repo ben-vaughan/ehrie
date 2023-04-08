@@ -1,51 +1,35 @@
 import "./style/Dashboard.css"
 
 import DashboardProfile from "../components/dashboard/DashboardProfile";
-import DashboardCharts from "../components/dashboard/DashboardCharts";
+import DashboardInfo from "../components/dashboard/DashboardInfo";
 import DashboardGauges from "../components/dashboard/DashboardGauges";
 import DashboardNavbar from "../components/dashboard/DashboardNavbar";
 
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
+
 import UserContext from "../contexts/UserContext";
 
 const Dashboard = () => {
   const { user } = useContext(UserContext);
-  
-  const profileProps = {
-    name: user.attributes.name.first + " " + user.attributes.name.last,
-    dateOfBirth: user.attributes.date_of_birth,
-    location: "Dublin, Ireland",
-    weight: 80.45,
-    height: 181,
-    bloodType: "O-"
+  const [currentCategory, setCurrentCategory] = useState(user.tests[0].category.id);
+  const [currentTest, setCurrentTest] = useState(user.tests[0]);
+
+  const userCategories = [];
+  for (let test of user.tests) {
+    const exists = userCategories.some(category => category.id === test.category.id);
+    if(!exists) {
+      userCategories.push(test.category)
+    }
   }
 
-  const gaugeProps = [    
-    {
-      nameShort: "HGB",
-      nameLong: "Hameoglobin",
-      value: 16.3,
-      unit: "g/dL"
-    },
-    {
-      nameShort: "RBC",
-      nameLong: "Red blood cells",
-      value: 5.4,
-      unit: "m/mcL"
-    },
-    {
-      nameShort: "PLT",
-      nameLong: "Platelets",
-      value: 90,
-      unit: "x 109/L"
-    },
-    {
-      nameShort: "HGB",
-      nameLong: "Hameoglobin",
-      value: 16.3,
-      unit: "g/dL"
+  const handleNavbarClick = (categoryId) => {
+    for (let test of user.tests) {
+      if(categoryId === test.category.id) {
+        setCurrentTest(test);
+      }
     }
-  ]
+    setCurrentCategory(categoryId)
+  }
 
   return (
     <div className="dashboard-wrapper">
@@ -53,19 +37,19 @@ const Dashboard = () => {
         <div className="dashboard-title">
           <h1> My Health </h1>
         </div>
-        <DashboardNavbar />
+        <DashboardNavbar callback={handleNavbarClick} defaultIndex={currentCategory} categories={userCategories} />
         <div className="dashboard-content">
           <div>
             <div className="dashboard-content-container">
-              <DashboardProfile {...profileProps} />
+              <DashboardProfile {...user.details} />
             </div>
           </div>
           <div>
             <div className="dashboard-content-container">
-              <DashboardCharts />
+              <DashboardInfo test = {currentTest}/>
             </div>
             <div>
-              <DashboardGauges gauges={gaugeProps}/>
+              <DashboardGauges testResults = {currentTest.results} />
             </div>
           </div>
         </div>

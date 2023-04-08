@@ -1,40 +1,40 @@
 import React from 'react';
 import "./style/Results.css";
 
-const Results = ({data}) => {
-
-  return(
+const Results = ({ test }) => {
+  return (
     <div className="results-wrapper">
       <div className="results-title-wrapper">
         <div className="results-title">
-          {data.location}
+          {test.date}
         </div>
         <div className="results-subtitle">
-          {data.date}
+          {test.date}
         </div>
         <div className="results-subtitle">
-          {data.provider}
+          {test.date}
         </div>
       </div>
       <div className="results-grid">
         <div/>
         <div/>
         {
-          data.results.map((i) => (
-            <React.Fragment key={i}>
+          test.results.map((result) => (
+            <React.Fragment key={result.test_result_id}>
               <div className="results-grid-item">
                 <div>
                   <div className="results-grid-item-main">
-                    {i.name}
+                    {result.components.name_short}
                   </div>
                   <div>
-                    {i.name_long}
+                    {result.components.name_long}
                   </div>
                 </div>
               </div>
               <div className="results-grid-item">
                 <button>
-                  {i.result}
+                  {/* {result.components.value} */}
+                  {`${result.components.value} ${result.components.unit_short}` }
                 </button>
               </div>
             </React.Fragment>

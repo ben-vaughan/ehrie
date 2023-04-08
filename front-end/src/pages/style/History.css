@@ -1,24 +1,27 @@
-.dashboard-wrapper {
-  display: flex;
-  height: 90vh;
-  justify-content: center;
-  align-items: center;
+.history-wrapper {
+  width: 100%;
+  margin: 1vw;
 }
 
-.dashboard-appointments-wrapper {
-  width: 60%;
+.history-container {
+  width: 100%;
+  margin-bottom: 10vh;
 }
 
-.dashboard-results-wrapper {
-  width: 40%;
+.history-title {
+  font-size: 1em;
 }
 
-.dashboard-inner {
-  display: flex;
-  width: 80%;
-  max-width: 1200px;
+
+.history-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
-/* .dashboard-section {
-  padding: 0px 10px 0px 10px;
-} */
+.history-content-container {
+  padding: 15px;
+  border-radius: 20px;
+  margin: 5px;
+  margin-bottom: 20px;
+  box-shadow: 9px 8px 22px -6px rgba(222,222,222,1);
+}

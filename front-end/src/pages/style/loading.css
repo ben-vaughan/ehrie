@@ -1,0 +1,8 @@
+.loading-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-inner {
+  text-align: left;
+}

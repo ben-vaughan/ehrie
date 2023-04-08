@@ -1,10 +1,10 @@
 import React from 'react';
 import "./style/Appointments.css";
 
-const Appointments = ({appointments, handleUpdate}) => {
+const Appointments = ({tests, callback}) => {
 
-  const handleClick = (appointmentData) => {
-    handleUpdate(appointmentData)
+  const handleClick = (testId) => {
+    callback(testId)
   }
 
   return(
@@ -25,32 +25,30 @@ const Appointments = ({appointments, handleUpdate}) => {
         <div/>
 
         {
-          appointments.map((i) => (
-            <React.Fragment key={i.id}>
+          tests.map((test) => (
+            <React.Fragment key={test.test_id}>
               <div className="appointments-grid-item">
-                {i.location}
+                {test.date}
               </div>
               <div className="appointments-grid-item">
-                {i.date}
+                {test.date}
               </div>
               <div className="appointments-grid-item">
-                {i.provider}
+                {test.date}
               </div>
               <div className="appointments-grid-item">
                 <div className="appointments-type-border">
-                  {i.type}
+                  {test.category.name}
                   </div>
               </div>
               <div className="appointments-grid-item">
-                <button onClick={() => handleClick(i)}> 
+                <button onClick={() => handleClick(test.test_id)}> 
                   Results
                 </button>
               </div>
             </React.Fragment>
           ))
         }
-
-
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import "./style/dashboard-profile.css"
 
 const DashboardProfile = (props) => {
+
   return (
     <div>
       <div className="profile-header">
@@ -10,10 +11,10 @@ const DashboardProfile = (props) => {
           </svg>
         </div>
         <div className="profile-header-name">
-          {props.name}
+          {(props.first_name + " " + props.last_name).replace('"', "'")}
         </div>
         <div className="profile-header-location">
-          {props.location}
+          {props.address}
         </div>
       </div>
       <div className="profile-content">
@@ -23,11 +24,11 @@ const DashboardProfile = (props) => {
         <table className="profile-content-grid">
           <tr>
             <td> Name </td>
-            <td className="profile-content-grid-value"> {props.name} </td>
+            <td className="profile-content-grid-value"> {(props.first_name + " " + props.last_name).replace('"', "'")} </td>
           </tr>
           <tr>
             <td> Date of Birth </td>
-            <td className="profile-content-grid-value"> {props.dateOfBirth} </td>
+            <td className="profile-content-grid-value"> {props.date_of_birth} </td>
           </tr>
           <tr>
             <td> Weight </td>
@@ -39,7 +40,7 @@ const DashboardProfile = (props) => {
           </tr>
           <tr>
             <td> Blood Type </td>
-            <td className="profile-content-grid-value"> {props.bloodType} </td>
+            <td className="profile-content-grid-value"> {props.blood} </td>
           </tr>
         </table>
       </div>

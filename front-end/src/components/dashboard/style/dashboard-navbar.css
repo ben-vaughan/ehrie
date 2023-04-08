@@ -19,10 +19,9 @@
   border-radius: 15px;
   font-size: 1em;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .dashboard-navbar li:first-child {
-  background-color: #6640DD;
   margin-left: 0px;
-  color: white;
 }
