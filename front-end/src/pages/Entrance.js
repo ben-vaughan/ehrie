@@ -5,21 +5,23 @@ import React, { useState, useEffect } from 'react';
 import Loading from "./Loading";
 
 const Entrance = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [finishedLoading, setFinishedLoading] = useState(false);
-  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);              // state to keep track of loading status
+  const [finishedLoading, setFinishedLoading] = useState(false);  // state to keep track of whether loading is finished
+  const navigate = useNavigate();                                 // hook for navigating to a different page
 
   const handleClick = () => {
-    setIsLoading(true);
+    setIsLoading(true);                                           // set loading state to true when user clicks the button
   }
 
   const finishedLoadingCallback = () => {
-    setIsLoading(false);
-    setFinishedLoading(true);
+    setIsLoading(false);                                          // set loading state to false when loading is finished
+    setFinishedLoading(true);                                     // set finished loading state to true when loading is finished
   };
 
   useEffect(() => {
+    // check if finished loading state is true
     if (finishedLoading) {
+       // navigate to the app page if finished loading
       navigate('/app');
     }
   }, [finishedLoading, navigate])

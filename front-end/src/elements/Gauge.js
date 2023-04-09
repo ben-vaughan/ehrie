@@ -11,23 +11,26 @@ const defaultOptions = {
   dialEndAngle: 20
 };
 
-
 const Gauge = props => {
+
   const gaugeEl = useRef(null);
   const gaugeRef = useRef(null);
 
   useEffect(() => {
+    // If the gauge doesn't exist, create it with the given props
     if (!gaugeRef.current) {
-      const options = { ...defaultOptions, ...props };
-      gaugeRef.current = SvgGauge(gaugeEl.current, options);
-      gaugeRef.current.setValue(options.initialValue);
+      const options = { ...defaultOptions, ...props };          // Merge default options with props
+      gaugeRef.current = SvgGauge(gaugeEl.current, options);    // Create the gauge with the given options
+      gaugeRef.current.setValue(options.initialValue);          // Set the initial value of the gauge
     }
-    gaugeRef.current.setValueAnimated(props.value, 1);
+    // Update the gauge value to the new props value
+    gaugeRef.current.setValueAnimated(props.value);
+
   }, [props]);
 
   return (
   <div>
-    <div ref={gaugeEl} className="gauge-container">
+    <div key={props.key} ref={gaugeEl} className="gauge-container">
       <div className="gauge-title">
         <h1> {props.nameShort} </h1>
         <p> {props.nameLong} </p>
@@ -35,6 +38,8 @@ const Gauge = props => {
     </div>
   </div>
 )};
+
+
 
 export default Gauge;
 

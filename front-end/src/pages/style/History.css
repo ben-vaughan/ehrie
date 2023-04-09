@@ -1,3 +1,19 @@
+@media only screen and (max-width: 600px) {
+  .history-title {
+    text-align: center;
+  }
+
+  .history-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .history-content-container {
+    width: 100% !important;
+  }
+}
+
 .history-wrapper {
   width: 100%;
   margin: 1vw;
@@ -14,8 +30,7 @@
 
 
 .history-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
 }
 
 .history-content-container {

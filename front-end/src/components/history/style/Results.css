@@ -7,8 +7,21 @@
 }
 
 .results-title {
+  position: relative;
   font-size: 16px;
   font-weight: 700;
+  padding-bottom: 5px;
+}
+
+.results-category {
+  display: inline;
+  position: absolute;
+  right: 0px;
+  background-color: #F7F7F7;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
 }
 
 .results-subtitle {
@@ -17,7 +30,7 @@
 
 .results-grid {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .results-grid-header {
@@ -27,26 +40,25 @@
 
 .results-grid-item-main {
   font-weight: 500;
+  width: 100%;
 }
 
 .results-grid-item {
   padding: 5px 0px 5px 0px;
   border-top: solid 1px #F4F4F4;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-weight: 300;
 }
 
-.results-grid-item button {
+.results-grid-item-value {
+  font-size: 1em;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 2px 2px;
+  width: 100%;
   border: none;
-  min-width: 90px;
-  color: white;
-  font-weight: 700;
-  background-color: #b3a5db;
-  padding: 8px 15px;
+  text-align: right;
   border-radius: 10px;
-}
-
-.results-grid-item button:hover {
-  cursor: pointer;
 }

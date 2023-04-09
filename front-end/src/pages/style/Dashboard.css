@@ -1,3 +1,16 @@
+@media only screen and (max-width: 600px) {
+  .dashboard-content {
+    display: flex !important;  
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-title {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Dashboard Wrapper & Containers */
 .dashboard-wrapper {
   width: 100%;

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import UserContext from './UserContext'
 
+// Define a component called `UserProvider`
 const UserProvider = ({ children }) => {
+
+  // Initialize user state with default values
   const [user, setUser] = useState(
     {
       patient_id: "",
@@ -37,14 +40,17 @@ const UserProvider = ({ children }) => {
     }
   );
 
+  // Define a function to set user data on login
   const login = (userData) => {
     setUser(userData);
   };
 
+  // Define a function to clear user data on logout
   const logout = () => {
     setUser(null);
   };
 
+  // Render the `UserProvider` component, providing context with user data and login/logout functions to its children
   return (
     <UserContext.Provider value={{ user, login, logout }}>
       { children }

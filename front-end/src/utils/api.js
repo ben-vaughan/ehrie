@@ -1,4 +1,6 @@
 export default {
+
+  // Retrieves a random patient
   getRandomPatient: async () => {
     return fetch(`https://13wev7clmh.execute-api.eu-west-1.amazonaws.com/beta/patients/random`, {
       method: 'GET',
@@ -8,7 +10,7 @@ export default {
   },
 
 
-  // Get all Tests associated with a patient
+  // Retrieves all tests associated with a given patient ID
   getTests: async (patient_id) => {
     return fetch(`https://13wev7clmh.execute-api.eu-west-1.amazonaws.com/beta/tests?patientid=${patient_id}`, {
       method: 'GET',
@@ -21,7 +23,7 @@ export default {
   },
 
 
-  // Get Test Results for a single Test
+  // Retrieves test results for a given test ID
   getTestResults: async (test_id) => {
     return fetch(`https://13wev7clmh.execute-api.eu-west-1.amazonaws.com/beta/tests/results?testid=${test_id}`, {
       method: 'GET',

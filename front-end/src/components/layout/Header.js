@@ -2,30 +2,39 @@ import './style/header.css'
 
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
+
 import logo from '../../assets/icons/heart-pulse.svg';
 import settings from '../../assets/icons/settings.svg';
 import x from '../../assets/icons/x.svg';
 
 const Header = () => {
-  const [modalActive, setModalActive] = useState(false);
+  
+  // state to track whether the settings modal is open
+  const [modalActive, setModalActive] = useState(false); 
+  // state to track which page is currently selected in the navba
   const [selectedPage, setSelectedPage] = useState(0);
+  // state to track user preferences
   const [preferences, setPreferences] = useState([false, false, false, false])
 
   const navigate = useNavigate();
 
+  // Function to style navbar items based on whether they are currently selected
   const listItemStyle = (index) => {
     return selectedPage === index ? { backgroundColor: '#6640DD', color: '#FFFFFF', width: '100%', padding:"2px 10px", borderRadius: '25px'} : {};
   }
 
+  // Function to navigate to the home page
   const navHome = () => {
     navigate('/')
   }
 
+  // Function to toggle the settings modal
   const flipSettings = () => {
     if (modalActive) { setModalActive(false); }
     else { setModalActive(true); }
   }
 
+  // Function to handle changes in user preferences
   const handlePreferenceChange = (index) => {
     const newPreferences = [...preferences];
     newPreferences[index] = !newPreferences[index];
@@ -49,6 +58,7 @@ const Header = () => {
         </div>
       </div>
       {
+        // If the settings modal is open, display the modal content
         modalActive ?
         (
           <>
