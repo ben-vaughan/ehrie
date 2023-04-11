@@ -21,7 +21,7 @@ const DashboardGauges = ({ testResults }) => {
                 max = { test.components.mean + (test.components.stdev * 2.5) }
                 color = { function(value) {
                   if(value > (test.components.mean - (test.components.stdev * 2)) && value < (test.components.mean + (test.components.stdev * 2))) {
-                    return '#6640DD';
+                    return '#BDE4A7';
                   }
                   else {
                     return '#FFDC6A'

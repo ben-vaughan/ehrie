@@ -48,7 +48,7 @@ const DashboardInfo = ({test}) => {
                       <td> {result.components.name_long} </td>
                       <td> {result.components.unit_short} </td>
                       <td> {result.components.mean} ± {result.components.stdev * 2} </td>
-                      <td> May be increased with infections, inflammation, cancer, leukaemia; decreased with some medications, some autoimmune conditions, some viral or severe infections, bone marrow failure, enlarged spleen, liver disease, alcohol excess and congenital marrow aplasia.  </td>
+                      <td> {result.components.desc}  </td>
                     </tr>
                   )
                 })
