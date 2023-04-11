@@ -59,7 +59,7 @@ const Loading = ({ callback }) => {
   return (
     <div className='loading-outer'>
       <div className='loading-inner'>
-        Retrieving synthetic data...
+        Retrieving data...
       </div>
     </div>
   )
