@@ -1,3 +1,7 @@
+> **Understanding Citizen Opinions on Receiving Granular Data from Laboratory Investigation Results via an Interactive Application** <br>
+> Trinity College Dublin, Computer Science and Business <br>
+> BA (Hons) Thesis (I.I)
+
 #### Motivation
 The aim of this study was to understand citizen’s opinions on receiving granular data from laboratory investigation results. This was achieved through the use of an interactive application as a medium, providing participants with a visual prototype of what they could expect if provided with an electronic health record (EHR) platform that displays these laboratory test results.
 
